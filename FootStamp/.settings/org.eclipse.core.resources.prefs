@@ -1,0 +1,10 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=refs/remotes/origin/master
+eclipse.preferences.version=1
+encoding//WebContent/resources/views/review.jsp=UTF-8
+encoding//src/com/footstamp/controller/FallowServlet.java=UTF-8
+encoding//src/com/footstamp/controller/MainServlet.java=UTF-8
+encoding//src/com/footstamp/controller/MemberServlet.java=UTF-8
+encoding//src/com/footstamp/controller/Story.java=UTF-8
+encoding//src/com/footstamp/service/FollowService.java=UTF-8

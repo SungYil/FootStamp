@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+/* 프로필 팔로우,팔로워,스토리 부분 */
+.profile_content{	
+	margin-top:40px;	
+}
+/* 게시물,팔로워,팔로잉 */
+.profile_table{
+	margin-top:20px;
+	margin-bottom:23px;
+	color:#828282;
+}
+/* 프로필 이미지 */
+#profile_image{
+	margin-left:17px;
+}
+/* 게시물, 팔로워, 팔로잉 수와의 거리*/
+th>a{
+	padding-bottom:30px;
+}
+/*
+#user_name{
+	margin-left:30px;
+	font-weight:bold;
+	font-size:15px;
+	color:black;
+}*/
+body {
+	font-family: 'Josefin Sans', sans-serif,nanumgothiccoding;
+}
+#user_follower_count,#user_following_count,#user_diary_count{
+	padding-top:10px;
+	color:black;
+}
+.btn_my_color{
+	background-color:#FF5A5A;
+	color:white;
+}

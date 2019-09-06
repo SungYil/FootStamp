@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+/* navbar 설정 */
+.navbar {
+	min-height: 100px;
+	padding : 20px 100px;
+}
+
+/* .navbar-default {
+	네비 배경색
+    background-color: yellow;
+    네비 border 색
+    border-color: green
+} */
+/* 네비의 브랜드색  */
+/* .navbar-default .navbar-brand {
+    color: white;
+} */
+/* .navbar {
+	min-width: 100%;
+} */
+/* form-group 설정 */
+.form-group{
+	margin : 18px 5px;
+}
+/* 타이틀 설정 */
+#title{
+	font-size: 3em;
+}
+/* 오류 메시지 설정 */
+.error_message {
+	color: red;
+}

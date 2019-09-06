@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+<!-- 메인 페이지 일기 게시물 부분 -->
+.panel-default{
+	background-color:white;
+}
+#panel_head{
+	background-color:white;	
+} 
+<!-- 일기 게시물 상단 헤더 부분 -->
+.diary_profile{
+	overflow:hidden;
+}
+.diary_profile>*{
+	float:left;
+}
+.diary_date{
+	overflow:hidden;
+}
+.diary_date>a{
+	float:right;
+}
+<!-- 일기 게시물 바디 부분 -->
+.panel-body{
+	overflow:hidden;
+}
+.diary_map{
+	height:300px; width:578px;
+}
+.diary_like{
+	margin-top:10px;
+	margin-left:5px;
+}
+.diary_review{
+	margin-top:10px;
+	margin-left:35px;
+}
+.diary_share{
+	margin-top:10px;
+	margin-left:30px;
+}
+.icons{
+	margin-top:10px;
+}

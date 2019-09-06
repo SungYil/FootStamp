@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #F7F7F7;
+	padding-top: 40px;
+	font-family: hanna;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+}
+
+<!--메신저 아이콘 설정 -->
+.glyphicon-send {
+	color: #1E90FF;
+	z-index: 1;
+	position: relative;
+}
+#alarm {
+	/* font-weight: 900; */
+	/* margin-top: 30px; */
+	text-align : center;
+	border-radius: 50%;
+	background-color: #FF5A5A;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	width : 20px;
+	height: 20px;
+	left: 20px;
+	top: -40px;
+	position: relative;
+	z-index: 2;
+}
+/*  */
+#message{
+	height: 35px;
+}
+#messenger {
+	font-size: 30px;
+	color: #1E90FF;
+	height:30px;
+}
+#icon{
+	margin-top: 25px;
+}
+
+.search_pop{
+	min-width:150px;
+}
+
+#my_popover{
+	height : 100px;
+	overflow : auto;
+}

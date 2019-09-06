@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+.popover {
+	min-width: 600px;
+	max-width: 600px;
+	max-height: 700px;
+}
+#search_friend {
+	border: 0px;
+}
+
+textarea {
+	resize: none;
+}
+
+#message_list {
+	border: 1px solid black;
+	height: 500px;
+}
+/* #message_list>div{
+	border: 1px solid red;
+} */
+h4 {
+	display: inline;
+}
+.pre-scrollable{
+  	height: 300px;
+}
+/* .talk{
+	border : 1px solid #c8c8c8;
+} */	

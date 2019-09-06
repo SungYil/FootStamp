@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+/* navbar 설정*/
+.navbar {
+	min-height: 100px;
+	padding: 20px 100px;
+}
+/* a 태그  글자 설정 */
+a {
+	font-size: 2.5em;
+	color : black;
+}
+/* 선택된거 처리 */
+ .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
+{
+	color: white;
+    background-color: red;
+} 
+/* nav에 마우스 올리기,포커스 */
+ .nav>li>a:focus,.nav>li>a:hover  {
+ 	color : white;
+	background-color: #c8c8c8;
+} 
+/* 아이콘 크기 설정 */
+.glyphicon {
+	font-size: 40px;
+}
