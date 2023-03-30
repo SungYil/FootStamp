@@ -1,0 +1,12 @@
+namespace: default
+
+bases:
+  - ../base
+
+resources:
+  - ./clientinfo-gateway.yaml
+
+images:
+  - name: clientinfo
+    newName: cleverpms/clientinfo
+    newTag: cd2-na-dev

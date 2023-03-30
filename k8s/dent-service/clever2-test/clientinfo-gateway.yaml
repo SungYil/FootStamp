@@ -1,0 +1,61 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: clientinfo-gateway
+  labels:
+    app: clientinfo
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - hosts:
+        - clever2-teset.vsmart00.com
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - clever2-test.vsmart00.com
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: clientinfo-cert
+        mode: SIMPLE
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: clientinfo-virtualservice
+  labels:
+    app: clientinfo
+spec:
+  gateways:
+    - clientinfo-gateway
+  hosts:
+    - "*"
+  http:
+    - match:
+        - uri:
+            prefix: "/clientinfo"
+      rewrite:
+        uri: "/"
+      corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+          - "*"
+        allowMethods:
+          - POST
+          - GET
+          - PUT
+          - OPTIONS
+        allowOrigins:
+          - regex: ".*"
+      route:
+        - destination:
+            host: clientinfo-service
+            port:
+              number: 8080

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientinfo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clientinfo
+  template:
+    metadata:
+      labels:
+        app: clientinfo
+    spec:
+      containers:
+        - name: clientinfo
+          image: clientinfo
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            tcpSocket:
+              port: 8080
+      imagePullSecrets:
+        - name: registry-secret
