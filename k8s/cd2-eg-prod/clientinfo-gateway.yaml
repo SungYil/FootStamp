@@ -1,0 +1,55 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: foot-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - hosts:
+        - foot.stamp.com
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - foot.stamp.com
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: clientinfo-cert
+        mode: SIMPLE
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: foot-virtualservice
+spec:
+  gateways:
+    - foot-gateway
+  hosts:
+    - "*"
+  http:
+    - match:
+        - uri:
+            prefix: /
+      corsPolicy:
+        allowCredentials: true
+        allowHeaders:
+          - "*"
+        allowMethods:
+          - POST
+          - GET
+          - PUT
+          - OPTIONS
+        allowOrigins:
+          - regex: ".*"
+      route:
+        - destination:
+            host: foot-service
+            port:
+              number: 8080
